@@ -18,7 +18,14 @@ export class DataServiceService {
   createNewUser(user:any){
     let userToSend = {email:user.email, firstName:user.name.firstName,lastName:user.name.lastName,password:user.password};
     return this.http_client.post(this.url + '/createUser', userToSend);
-
-
   }
+
+  getCourse(){
+    return this.http_client.get(this.url + '/courses')
+  }
+  addCourse(course:any){
+    return this.http_client.post(this.url + '/courses', course);
+  }
+
+
 }

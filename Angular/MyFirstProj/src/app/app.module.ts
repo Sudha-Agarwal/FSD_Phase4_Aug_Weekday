@@ -11,6 +11,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { ModelFormComponent } from './model-form/model-form.component';
+import { CourseComponent } from './course/course.component';
+import { AddCourseComponent } from './add-course/add-course.component';
+import { CourseDetailComponent } from './course-detail/course-detail.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { ModelFormComponent } from './model-form/model-form.component';
     HomeComponent,
     LoginFormComponent,
     TemplateFormComponent,
-    ModelFormComponent
+    ModelFormComponent,
+    CourseComponent,
+    AddCourseComponent,
+    CourseDetailComponent
   ],
   imports: [
     BrowserModule,
