@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataServiceService } from '../data-service.service';
-import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-login-form',
@@ -17,21 +17,11 @@ export class LoginFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  form = {
-    fullname: '',
-    username: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-    acceptTerms: false,
-  };
-
-  onSubmit(): void {
-    console.log(JSON.stringify(this.form, null, 2));
-  }
-
-  onReset(form: NgForm): void {
-    form.reset();
+  onSubmit(){
+  console.log("form submitted");
+    console.log(this.user);
+ 
+    this.ds.checkLogin(this.user).subscribe(response => console.log(response));
   }
 
 }

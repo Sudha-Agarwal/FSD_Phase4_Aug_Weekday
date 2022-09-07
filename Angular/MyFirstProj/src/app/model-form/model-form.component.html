@@ -1,0 +1,24 @@
+<div class="container">
+
+    <form [formGroup] = "myform" (ngSubmit) = "onSubmit(myform.value)">
+        <fieldset formGroupName = "name">
+            <label>First Name</label>
+            <input type = "text" formControlName = "firstName">
+
+            <label>Last Name</label>
+            <input type = "text" formControlName = "lastName">
+
+        </fieldset>
+
+        <label>Email</label>
+        <input type = "email" formControlName = "email">
+        <div *ngIf = "email.errors && (email.dirty || email.touched)">
+            <p *ngIf = "email.errors">Email is required</p>
+        </div>
+
+        <label>Password</label>
+        <input type = "password" formControlName = "password">
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
