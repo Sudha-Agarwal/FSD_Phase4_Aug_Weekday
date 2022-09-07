@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            background-image: url('829466_man_512x512.png');     
+            
+            background-repeat: no-repeat;
+            background-position:right top;
+            background-size: 500px 500px;
+        }
+/*child selector */
+        div>p{
+            color:red;
+        }
+/*descendant selector*/
+        div p{
+            color:green;
+        }
+
+        /* General sibling*/
+        div~p{
+           color:yellowgreen;
+       }
+       /*adjacent sibling */
+       div+p{
+           color:blue;
+       }
+
+       p:hover{
+           background-color: violet;
+       }
+
+       a#a2:link{
+           color:red;
+       }
+
+       a:visited{
+           color:grey;
+       }   
+
+       p::first-letter{
+           color:red;
+       }
+
+       a#a1::after{
+           content:"after"
+       }
+
+       ::marker{
+           color:green;
+       }
+/*attribute selector*/
+       a[href ="abc.html"]{
+           color:red;
+       }
+
+       #p1{
+           font-family: Arial, Helvetica, sans-serif;
+           font-weight: bolder;
+           font-size: 2em;
+
+           border: 10px solid green;
+
+           margin:20px;
+           padding: 50px;
+       }
+
+       a{
+           text-decoration: none;
+       }
+
+       li:nth-child(2){
+           color:green;
+       }
+
+       #div1{
+           
+        margin-top:30px;
+        width:100px;
+           height:100px;
+           background-color: red;
+           border:1px solid black;
+           /*transform: scale(2,3) rotate(20deg); */
+           transition :1s;
+
+
+       }
+
+       #div1:hover{
+           transform: scale(1.2,1.2);
+       }
+
+    </style>
+</head>
+<body>
+
+    <div id="div1">
+
+    </div>
+
+<ul class="nav-list">
+    <li class="nav-item">Item1</li>
+    <li class="nav-item">Item2</li>
+    <li class="nav-item"><a href="abc.html">Item1</a></li>
+    <li class="nav-item"><a href="#"></a></li>
+    <li class="nav-item"><a href="#"></a></li>
+</ul>
+
+    
+
+  
+
+    <a id="a1" href="#">Link</a>
+    <a id="a2" href="abc.html">Link1</a>
+    <a id="a3" href="abc1.html">Link1</a>
+
+
+    <div>
+        <p id="p1">Paragraph1 Paragraph1Paragraph1 Paragraph1Paragraph1 
+            Paragraph1Paragraph1 
+            Paragraph1Paragraph1 
+            Paragraph1Paragraph1 
+            Paragraph1Paragraph1 
+            Paragraph1Paragraph1 
+            Paragraph1Paragraph1 
+            Paragraph1Paragraph1 
+            Paragraph1Paragraph1 
+            Paragraph1Paragraph1 
+            Paragraph1Paragraph1 
+            Paragraph1Paragraph1 
+            Paragraph1Paragraph1 
+
+        </p>
+        <p>Paragraph2</p>
+        <nav><p>Paragraph4</p></nav>
+    </div>
+
+    <p>Paragraph3</p>
+    <p>Paragraph5</p>
+    
+</body>
+</html>

@@ -1,0 +1,17 @@
+#p1, #h6{
+    color: red;
+}
+
+
+p.pclass{
+    color:red;
+    font-size: 20px;
+}
+
+.list-group-item{
+    display: inline;
+}
+
+.pclass2{
+    text-decoration: underline;
+}
